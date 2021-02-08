@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uev-xO-yOC">
+                                <rect key="frame" x="0.0" y="94" width="390" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XUv-G5-0ya">
+                                <rect key="frame" x="20" y="134" width="350" height="566"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5G-u4-sth">
+                                <rect key="frame" x="20" y="740" width="350" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="FXi-yL-nwR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="Retry">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="5Ld-Xk-ekI">
+                                <rect key="frame" x="185" y="412" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B5G-u4-sth" secondAttribute="trailing" constant="20" id="0wB-uj-hwv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XUv-G5-0ya" secondAttribute="trailing" constant="20" id="5Yx-vW-gdj"/>
+                            <constraint firstItem="B5G-u4-sth" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-20" id="CAf-gD-1cD"/>
+                            <constraint firstItem="XUv-G5-0ya" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="EQE-Td-0CX"/>
+                            <constraint firstItem="XUv-G5-0ya" firstAttribute="top" secondItem="Uev-xO-yOC" secondAttribute="bottom" constant="40" id="O6M-EH-nWQ"/>
+                            <constraint firstItem="XUv-G5-0ya" firstAttribute="bottom" secondItem="B5G-u4-sth" secondAttribute="top" constant="-40" id="Suk-zl-FDv"/>
+                            <constraint firstItem="5Ld-Xk-ekI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TZI-xe-0uk"/>
+                            <constraint firstItem="5Ld-Xk-ekI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="V4b-9N-dVz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uev-xO-yOC" secondAttribute="trailing" id="bPA-lv-cId"/>
+                            <constraint firstItem="Uev-xO-yOC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gwS-Pd-WYp"/>
+                            <constraint firstItem="B5G-u4-sth" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pJc-Ee-n8H"/>
+                            <constraint firstItem="Uev-xO-yOC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="ttJ-oR-eAM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailsTextView" destination="XUv-G5-0ya" id="PIN-04-3Ea"/>
+                        <outlet property="resultLabel" destination="Uev-xO-yOC" id="cMl-7a-fMf"/>
+                        <outlet property="retryButton" destination="B5G-u4-sth" id="qio-Hi-JsD"/>
+                        <outlet property="spinnerView" destination="5Ld-Xk-ekI" id="ecB-3i-Y2J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-197.10144927536234" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
